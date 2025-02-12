@@ -86,13 +86,3 @@ jobs:
           git add download_link.txt
           git commit -m "updated release download link for ${{ env.NEW_TAG }}"
           git push origin main
-
-      - name: Store Release URL in Zapier Storage
-        run: |
-          WEBHOOK_URL="https://hooks.zapier.com/hooks/catch/16674573/2ajp8n8/"  # Replace with your Zapier Webhook
-          RELEASE_URL="https://github.com/${{ github.repository }}/releases/download/release-${{ github.run_id }}/resume.pdf"
-
-          curl -X POST -H "Content-Type: application/json" \
-          -d '{"pdf_url": "'"$RELEASE_URL"'"}' \
-          "$WEBHOOK_URL"
-
