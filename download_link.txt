@@ -1,1 +1,1 @@
-https://github.com/Antfuce/pdf-generator-workflow/releases/download/release-20250212103747/resume.pdf
+https://github.com/Antfuce/pdf-generator-workflow/releases/download/release-20250212105122/resume.pdf
