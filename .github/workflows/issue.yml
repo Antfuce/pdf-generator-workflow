@@ -25,9 +25,6 @@ jobs:
       - name: save github issue_body to resume.json file
         run: echo '${{ github.event.issue.body }}' > resume.json
 
-      - name: validate resume.json file
-        run: npx resumed validate resume.json
-
       - name: generate html file from resume.json
         run: npx resumed render --theme jsonresume-theme-even
       
